@@ -1,3 +1,10 @@
 export default function createIteratorObject(report) {
-  return Object.values(report.allEmployees).reduce((acc, val) => [...acc, ...val]);
+  // apply async function to help push out each array item
+  return (function* _() {
+    for (const department of Object.values(report.allEmployees)) {
+      for (const employee of department) {
+        yield employee;
+      }
+    }
+  }());
 }
