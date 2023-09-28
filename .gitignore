@@ -131,3 +131,10 @@ dist
 
 #ignore for emacs temp files
 *~
+
+#project folder config files
+package.json
+bable.config.js
+utils.js
+.eslintrc.js
+node_modules/*
