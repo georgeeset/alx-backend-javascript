@@ -3,12 +3,12 @@ const fs = require('fs');
 /**
  * Using the database database.csv (provided in project description),
  * create a function countStudents
- */ 
+ */
 const countStudents = (dataPath) => {
   if (!fs.existsSync(dataPath)) {
     throw new Error('Cannot load the database');
   }
-  if (! fs.statSync(dataPath).isFile()) {
+  if (!fs.statSync(dataPath).isFile()) {
     throw new Error('Cannot load the database');
   }
   const fileLines = fs
